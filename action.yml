@@ -1,0 +1,9 @@
+name: C++ code linter with cppcheck
+description: Automatically checks pull requests changes with cppcheck and posts the comment with result.
+author: Hassan Pouralijan
+branding:
+  icon: alert-circle
+  color: green
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
