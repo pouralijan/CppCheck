@@ -1,5 +1,9 @@
 #!/bin/bash
 
+ls -la
+
+echo $PWD
+
 echo "$DIRS"
 cppcheck --enable=all --std=c++11 --language=c++ --output-file=cppcheck-report.txt $DIRS
 
