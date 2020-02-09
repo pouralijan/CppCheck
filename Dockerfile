@@ -10,8 +10,7 @@ LABEL maintainer="Hasasan Pouralijana <pouralijan@gmail.com>"
 
 WORKDIR /
 RUN apt-get update
-RUN apt-get -qq -y install curl
-RUN apt-get -y -qq install clang-tidy cmake jq clang cppcheck
+RUN apt-get -y -qq install cppcheck
 
 ADD cpp_checker.sh /cpp_checker.sh
 COPY . .
