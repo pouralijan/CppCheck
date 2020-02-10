@@ -1,10 +1,7 @@
 #!/bin/bash
 
-ls -la
-
-echo $PWD
-
 echo "$DIRS"
+
 cppcheck --enable=all --std=c++11 --language=c++ --output-file=cppcheck-report.txt $DIRS
 
 PAYLOAD_CPPCHECK=`cat cppcheck-report.txt`
@@ -15,4 +12,4 @@ echo $PAYLOAD_CPPCHECK
 OUTPUT+=$'\n**CPPCHECK WARNINGS**:\n'
 OUTPUT+="$PAYLOAD_CPPCHECK"
 
-echo OUTPUT
+echo $OUTPUT
